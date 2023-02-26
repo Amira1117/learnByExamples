@@ -3,16 +3,18 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.content,
+.content {
+    width: 900px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    counter-reset: numbers
+}
+
 h1,
 h2 {
     width: 900px;
     margin: 0 auto;
     padding-bottom: 20px;
-}
-
-h1,
-h2 {
     text-align: center;
 }
 
@@ -27,6 +29,25 @@ h2 {
     outline: none;
     font-size: 15px;
     transition: 0.4s;
+}
+
+.accordion::before {
+    position: static;
+    margin: 10px;
+    counter-increment: numbers;
+    content: counter(numbers)".";
+}
+
+.accordion.done::after {
+    float: right;
+    color: green;
+    content: "✔";
+}
+
+.accordion::after {
+    float: right;
+    color: pink;
+    content: "❏";
 }
 
 .accordion a {
@@ -44,4 +65,17 @@ h2 {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    margin: 0 10px;
+}
+
+.panel input {
+    margin: 30px 70px;
+    float: right;
+    color: #bbb;
+}
+
+.panel input::after {
+    content: 'Сделано';
+    position: relative;
+    left: 25px;
 }

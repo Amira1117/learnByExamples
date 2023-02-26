@@ -1,5 +1,6 @@
 var acc = document.getElementsByClassName("accordion");
 let selectedId = localStorage.getItem('selectedId');
+let done = localStorage.getItem('done');
 var i;
 
 // добавляем идентификатор
@@ -12,26 +13,51 @@ for (i = 0; i < acc.length; i++) {
     }
 }
 
-// добавляем слушателей к строкам
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-        openRow(this)
-    });
+
+function closeAllRow() {
+
 }
 
-// При каждом нажатии скрыть открытые поля
-function closeAllRow() {
-    for (i = 0; i < acc.length; i++) {
-        acc[i].nextElementSibling.style.maxHeight = null;
-    }
+// добавляем слушателей к строкам
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", openRow);
 }
 
 // Отерываение при нажатии но строку
 function openRow(me) {
-    console.log(me)
-    localStorage.setItem('selectedId', me.id); // запоминаем открутое поле
-    closeAllRow()
-    me.classList.toggle("active");
-    var panel = me.nextElementSibling;
+    localStorage.setItem('selectedId', me.target.id); // запоминаем открытое поле
+
+    // При каждом нажатии скрыть открытые поля
+    for (i = 0; i < acc.length; i++) {
+        acc[i].nextElementSibling.style.maxHeight = null;
+    }
+
+    var panel = me.target.nextElementSibling;
+    me.target.classList.add("toggle");
     panel.style.maxHeight = panel.scrollHeight + "px";
+}
+
+// проставим галочки сделано, понавешаем слушателей чекбокса "Сделано"
+document.querySelectorAll('[type="checkbox"]').forEach(el => {
+    if (done.includes(+el.parentElement.previousElementSibling.id + 1)) {
+        el.checked = true
+        el.parentElement.previousElementSibling.classList.toggle("done")
+    }
+    el.addEventListener("click", handler)
+})
+
+
+function handler(el) {
+    let doneArr = done.split(',').map(el => +el)
+    let numberTask = +el.target.parentElement.previousElementSibling.id + 1
+    if (doneArr.indexOf(numberTask) > 0) {
+        let index = doneArr.indexOf(numberTask)
+        el.target.parentElement.previousElementSibling.classList.remove("done")
+        doneArr.splice(index, 1)
+    } else {
+        doneArr.push(numberTask)
+        el.target.parentElement.previousElementSibling.classList.add("done")
+    }
+    done = doneArr.join(',')
+    localStorage.setItem('done', done)
 }
