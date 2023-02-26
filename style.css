@@ -18,6 +18,14 @@ h2 {
     text-align: center;
 }
 
+@media (max-width: 900px) {
+    .content,
+    h1,
+    h2 {
+        width: 100%;
+    }
+}
+
 .accordion {
     background-color: #eee;
     color: #444;
@@ -69,7 +77,7 @@ h2 {
 }
 
 .panel input {
-    margin: 30px 70px;
+    margin: 0 70px 30px;
     float: right;
     color: #bbb;
 }
@@ -78,4 +86,10 @@ h2 {
     content: 'Сделано';
     position: relative;
     left: 25px;
+}
+
+.description {
+    font-size: 0.83em;
+    font-style: italic;
+    text-align: center;
 }

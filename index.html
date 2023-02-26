@@ -10,48 +10,67 @@
 </head>
 
 <body>
-    <h1>Изучаем html/css/js на примерах.</h1>
+    <h1><img src="logo.png">Изучаем html/css/js на примерах.</h1>
     <h2>Для начинающих.</h2>
 
     <div class="content">
-        <button class="accordion">Подготовить рабочее место</button>
+        <button class="accordion">Подготовка рабочего места</button>
         <div class="panel">
-            <p>Нужно установить и настроить Visual Studio Code (VSC)</p>
-            <p><a href="installVSC/index9.html">Руководство</a></p>
+            <p>Установка программы Visual Studio Code (VSC)</p>
+            <p class="description">Это редактор кода с умным автодополнением. Автодополения - подсказки облегчают набор кода
+            </p>
+            <p><a href="installVSC/index9.html">Руководство по установке</a></p>
             <input type="checkbox">
         </div>
 
-        <button class="accordion">Необходимо установить плагин Live Server на VSC
-            
+        <button class="accordion">Установка плагина Live Server на VSC
+
         </button>
         <div class="panel">
-            <p>Руководство</p>
+            <p class="description">Данный плагин позволит запускать сайт и обновлять его, пока вы редактируете код, в фоновом режиме.</p>
+            <p>Руководство по установке</p>
             <input type="checkbox">
         </div>
 
         <button class="accordion">Создать проект</button>
         <div class="panel">
             <p>
-                Необходимо создать папку, например под именем projects. Создать в нем папку например myFirstProject. Открыть эту папку из VSC меню File/Open folder...
+                Создать папку "projects" на диске. </p>
+            <p>Создать в ней папку, например "myFirstProject". </p>
+            <p>Открыть эту папку из VSC через меню File/Open folder...
             </p>
             <input type="checkbox">
         </div>
 
-        <button class="accordion">Создать первый сайт и открыть в браузере</button>
+        <button class="accordion">Создать сайт и открыть в браузере</button>
         <div class="panel">
-            <p>
-                Создать первый файл в проекте, например назвать index.html. Используя шаблон создать первый сайт, для этого внутри файла index.html нужно набрать "!"+enter. Внутри тега body написеть "Hello World!". Теперь чтобы открыть это в браузере нужно нажать "Go
-                Live", это внизу справа у VSC, если правильно установлен плагин "Live Server"
-            </p>
+            <p> Добавить файл "index.html". </p>
+            <p>Используя комбинацию "!"+enter заполнить файл шаблоном html разметки.</p>
+            <p>Внутри тега body добавить текст "Hello World!".</p>
+            <p>Открыть в браузере нажатием "Go Live", командой внизу справа у VSC, командой от плагина "Live Server" </p>
             <input type="checkbox">
         </div>
 
-        <button class="accordion">Стили для сайта</button>
+        <button class="accordion">Цвет фона и цвет букв <b>(css)</b></button>
         <div class="panel">
-            <p>Нужно создать страничку в папке solutions, назвать его style.html. Добавить куплет от стихотворения "В лесу родиласть ёлочка"</p>
-            <p>Тест рассположить по центру стриницы</p>
-            <p>Внутри сайта включить стили: фон голубой, первые буквы строк стихотворения раскрашены в разные цвета</p>
-            <p>Информацию о стилях брать с сайта htmlbook или запросами goolge</p>
+            <p class="description">css стили: background, color</p>
+            <p>Создать страницу i2.html. </p>
+            <p>Добавить блок style, внутри для body установить фон - зеленый </p>
+            <p>Добавить текст куплета от стихотворения "В лесу родиласть ёлочка"</p>
+            <p>Текст рассположить по центру страницы (text-align)</p>
+            <p>Первые буквы строк стихотворения раскрасить в разные цвета</p>
+            <p class="description">Информацию о стилях брать с сайта htmlbook.ru или запросами goolge</p>
+            <input type="checkbox">
+        </div>
+
+        <button class="accordion">Расположение текста по центру <b>(css)</b></button>
+        <div class="panel">
+            <p class="description">css стили: text-align</p>
+            <p>Открыть страницу i2.html. </p>
+            <p>Добавить заголовок h1 "В лесу родиласть ёлочка"</p>
+            <p>Заголовок рассположить по центру страницы (text-align)</p>
+            <p>Текст со стихотворением разположить справа</p>
+            <p>Используя div, width и параметр стиля justify сделать равные края для стихотвеорения</p>
             <input type="checkbox">
         </div>
         <script src="script.js"></script>

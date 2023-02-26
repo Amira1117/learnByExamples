@@ -25,15 +25,16 @@ for (i = 0; i < acc.length; i++) {
 
 // Отерываение при нажатии но строку
 function openRow(me) {
-    localStorage.setItem('selectedId', me.target.id); // запоминаем открытое поле
-
     // При каждом нажатии скрыть открытые поля
-    for (i = 0; i < acc.length; i++) {
-        acc[i].nextElementSibling.style.maxHeight = null;
-    }
+    Object.keys(acc).map(el => acc[el].nextElementSibling.style.maxHeight = null)
+
+    if (selectedId === me.target.id) return
+
+    selectedId = me.target.id
+    localStorage.setItem('selectedId', selectedId); // запоминаем открытое поле
 
     var panel = me.target.nextElementSibling;
-    me.target.classList.add("toggle");
+    me.target.classList.add("active");
     panel.style.maxHeight = panel.scrollHeight + "px";
 }
 
