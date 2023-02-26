@@ -1,6 +1,6 @@
 var acc = document.getElementsByClassName("accordion");
-let selectedId = localStorage.getItem('selectedId');
-let done = localStorage.getItem('done');
+let selectedId = localStorage.getItem('selectedId') || '';
+let done = localStorage.getItem('done') || '';
 var i;
 
 // добавляем идентификатор
@@ -11,11 +11,6 @@ for (i = 0; i < acc.length; i++) {
         panel.style.maxHeight = panel.scrollHeight + "px";
         acc[i].classList.toggle("active");
     }
-}
-
-
-function closeAllRow() {
-
 }
 
 // добавляем слушателей к строкам
