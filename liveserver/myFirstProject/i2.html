@@ -11,6 +11,7 @@
             background: green;
             text-align: center;
             color: aliceblue;
+            font-size: 1.5em;
         }
         
         p:first-letter {
@@ -20,12 +21,16 @@
         .bb {
             font-weight: 600;
         }
+        
+        .dotted {
+            border-bottom: 2px dotted rgb(255, 255, 255);
+        }
     </style>
 </head>
 
 <body>
     <h1>В лесу родилась ёлочка</h1>
-    <b><p>В лесу родилась ёлочка,</b>
+    <b><p>В <span class="dotted">лесу</span>  родилась ёлочка,</b>
     <strong><p>В лесу она росла. </p></strong>
     <p class="bb">Зимой и летом стройная,</p>
     <p> Зелёная была.</p>
