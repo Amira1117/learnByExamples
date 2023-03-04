@@ -2,6 +2,7 @@ var acc = document.getElementsByClassName("accordion");
 let selectedId = localStorage.getItem('selectedId') || '';
 let done = localStorage.getItem('done') || '';
 var i;
+let qqq = 0;
 
 // добавляем идентификатор
 for (i = 0; i < acc.length; i++) {
@@ -23,7 +24,8 @@ function openRow(me) {
     // При каждом нажатии скрыть открытые поля
     Object.keys(acc).map(el => acc[el].nextElementSibling.style.maxHeight = null)
 
-    if (selectedId === me.target.id) return
+    qqq++
+    if (qqq % 2 && selectedId === me.target.id) return
 
     selectedId = me.target.id
     localStorage.setItem('selectedId', selectedId); // запоминаем открытое поле
