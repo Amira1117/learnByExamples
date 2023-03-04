@@ -8,43 +8,56 @@
     <title>Первый урок</title>
     <style>
         body {
-            background-image: url(whiteblue11.png);
-            font-size: 35px;
+            background: url(whiteblue11.png);
+            font-size: 40px;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 0 0 10px white;
         }
-        
+
         button {
-            background-image: url(lightblue11.png);
             font-size: 25px;
             margin: auto;
             display: block;
             cursor: pointer;
         }
-        
+
         img {
             width: 555px;
             margin: auto;
             display: block;
         }
+
+        a {
+            text-decoration: none
+        }
     </style>
 </head>
 
 <body>
-    Для того чтобы начать писать код, тебе нужно установить Visual Studio Code.
-    <br><br>
-    <button onclick="y()">Установить Visual Studio Code</button>
+Для того чтобы начать писать код, нужно установить специальный редактор.
+<br><br>
+<a href="https://code.visualstudio.com/download">
+    <button>Установить Visual Studio Code</button>
     <br>
     <p><img src="VSCC.JPG"></p>
-    <h4>Должно выглядеть вот так</h4>
-    <button onclick="e()">Продолжить</button>
-    <script>
-        function y() {
-            location.href = 'https://code.visualstudio.com/download'
-        }
+</a>
 
-        function e() {
-            location.href = 'index12.html'
-        }
-    </script>
+
+Отлично! Теперь можно открыть программу через кнопку пуск:
+
+<p><img style="width: 200px" src="пуск.JPG"></p>
+<br>Нужно искать иконку программы, или для поиска набрать VSC
+<p><img class="uy" src="VSC.JPG"></p>
+Теперь можно открыть редактор для программирования
+
+
+<script>
+
+    function e() {
+        location.href = 'index12.html'
+    }
+</script>
 </body>
 
 </html>
