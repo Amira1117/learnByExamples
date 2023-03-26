@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: darkblue;
+            text-align: center;
+        }
+        
+        button,
+        input {
+            font-size: 32px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="inp">
+    <button onclick="save()">Сохранить</button>
+
+    <script>
+        let inp = document.querySelector('#inp')
+        let zzz = localStorage.getItem('value')
+        co
+
+        function save() {
+
+            console.log("value", inp.value)
+            localStorage.setItem('inp', inp.value)
+        }
+    </script>
+
+</body>
+
+</html>
