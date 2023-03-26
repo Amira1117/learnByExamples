@@ -1,0 +1,104 @@
+body {
+    background: darkblue;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button,
+input {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#gameArea {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    background: rgb(39, 127, 227);
+    margin: auto;
+}
+
+#map {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    width: 138px;
+    margin: auto;
+    padding: 0;
+}
+
+#map2 {
+    z-index: 0;
+    position: absolute;
+    /*margin-top: 138px;*/
+    width: 138px;
+    height: 138px;
+    left: calc(50% - 69px);
+    background: rgb(39, 127, 227);
+}
+
+#map2 div {
+    width: 10px;
+    height: 10px;
+    background: rebeccapurple;
+    position: absolute;
+}
+
+#map div {
+    z-index: 10;
+    background: rebeccapurple;
+    display: inline-block;
+    margin: 2px;
+    min-width: 26px;
+    min-height: 26px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#gameArea button {
+    position: absolute;
+    border-radius: 100px;
+    background: transparent;
+    cursor: pointer;
+}
+
+#gameArea .top {
+    left: 46%;
+    top: 0;
+    width: 45px;
+}
+
+#gameArea .top::after {
+    content: '⇧';
+}
+
+#gameArea .bottom {
+    left: 46%;
+    bottom: 0;
+    width: 45px;
+}
+
+#gameArea .bottom::after {
+    content: '⇩'
+}
+
+#gameArea .left {
+    left: 0;
+    bottom: 48%;
+}
+
+#gameArea .left::after {
+    content: '⇦'
+}
+
+#gameArea .right {
+    right: 0;
+    bottom: 48%;
+}
+
+#gameArea .right::after {
+    content: '⇨'
+}

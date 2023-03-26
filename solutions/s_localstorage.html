@@ -26,12 +26,10 @@
 
     <script>
         let inp = document.querySelector('#inp')
-        let zzz = localStorage.getItem('value')
-        co
+        let zzz = localStorage.getItem('inp')
+        inp.value = zzz
 
         function save() {
-
-            console.log("value", inp.value)
             localStorage.setItem('inp', inp.value)
         }
     </script>
